@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { UserSchema } from "../types/user.type";
 
-// ✅ Register DTO (Create User)
 export const CreateUserDTO = UserSchema.pick({
   firstName: true,
   lastName: true,
