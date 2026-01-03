@@ -7,7 +7,7 @@ const userService = new UserService();
 export class AuthController {
   async register(req: Request, res: Response) {
     try {
-      // ✅ DEBUG (temporary)
+      
       console.log("REGISTER CT:", req.headers["content-type"]);
       console.log("REGISTER BODY:", req.body);
 
@@ -38,7 +38,7 @@ export class AuthController {
 
   async login(req: Request, res: Response) {
     try {
-      // ✅ DEBUG (temporary)
+      
       console.log("LOGIN CT:", req.headers["content-type"]);
       console.log("LOGIN BODY:", req.body);
 
