@@ -18,7 +18,6 @@ export const CreateUserDTO = UserSchema.pick({
 
 export type CreateUserDTO = z.infer<typeof CreateUserDTO>;
 
-// ✅ Login DTO
 export const LoginUserDTO = z.object({
   email: z.string().email("Invalid email"),
   password: z.string().min(6, "Password must be at least 6 characters"),
