@@ -1,3 +1,4 @@
+//user.model.ts
 import mongoose, { Document, Schema } from "mongoose";
 import { UserType } from "../types/user.type";
 const UserSchema: Schema = new Schema<UserType>(
@@ -7,6 +8,7 @@ const UserSchema: Schema = new Schema<UserType>(
         name: { type: String, required: true, unique: true },
         firstName: { type: String },
         lastName: { type: String },
+        image: { type: String },
         role: {
             type: String,
             enum: ['user', 'admin'],
