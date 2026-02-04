@@ -6,6 +6,8 @@ import bodyParser from "body-parser";
 import adminUserRoutes from "./routes/admin.user.route";
 import authRoutes from "./routes/auth.route";
 import { connectDatabase } from "./database/mongodb";
+import userAvatarRoutes from "./routes/user.avatar.route";
+
 import { PORT } from "./config";
 
 const app: Application = express();
@@ -13,6 +15,7 @@ const app: Application = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/api/users", userAvatarRoutes);
 
 
 // Routes
